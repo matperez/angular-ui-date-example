@@ -54,13 +54,11 @@ var app = angular.module('App', ['ui'])
 			onSelect: onSelect
 		};
 
-		$scope.days = 0;
-
-		$scope.updateDays = function() {
+		$scope.getDiff = function() {
 			var to = moment($('#date-to').datepicker('getDate'), 'L'),
 				from = moment($('#date-from').datepicker('getDate'), 'L');
 
-			$scope.days = to.diff(from, 'days');
+			return to.diff(from, 'days');
 		};
 
 		$scope.dateFrom = new Date(moment().add(1, 'days').format());
