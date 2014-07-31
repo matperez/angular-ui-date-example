@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="application/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="application/javascript" src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script type="application/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="application/javascript" src="bower_components/angular-ui/build/angular-ui.js"></script>
+    <script type="application/javascript" src="bower_components/angular-ui/modules/directives/date/date.js"></script>
+    <script type="application/javascript" src="bower_components/moment/moment.js"></script>
+    <script type="application/javascript" src="bower_components/moment/locale/ru.js"></script>
+    <script type="application/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-ui/build/angular-ui.css"/>
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/dark-hive/jquery-ui.css"/>
+    <title>ui date test</title>
+</head>
+<body ng-app="App" ng-controller="MyController">
+<label for="date-from">from date:</label>
+<input id="date-from" type="text" name="date-from" ui-date="dateOptions" ng-model="dateFrom" ng-change="updateDays()"/>
+<br/>
+<label for="date-to">to date:</label>
+<input id="date-to" type="text" name="date-to" ui-date="dateOptions" ng-model="dateTo" ng-change="updateDays()" data-set-by-user="false"/>
+<br/>
+<label for="sport-from">sport from:</label>
+<input id="sport-from" type="text" name="sport-from" ui-date="dateOptions" ng-model="sportFrom" ng-change="updateDays()"/>
+<br/>
+<label for="sport-to">sport to:</label>
+<input id="sport-to" type="text" name="sport-to" ui-date="dateOptions" ng-model="sportTo" ng-change="updateDays()"/>
+<br/>
+<div>selected days: {{days}}</div>
+
+</body>
+</html>
